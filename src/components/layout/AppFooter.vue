@@ -121,14 +121,14 @@ const socialMediaList = [
           <div class="space-y-2.5 text-xs sm:text-sm text-teal-100/75">
             <div>
               <span class="block text-[10px] sm:text-[11px] font-semibold text-teal-400 mb-0.5">{{ isRTL ? 'الهاتف المباشر:' : 'Direct Phone:' }}</span>
-              <a :href="`tel:${contactConfig.phoneFormatted}`" class="text-white hover:text-[#24a3b1] font-bold">
+              <a :href="`tel:${contactConfig.phoneFormatted}`" class="text-white hover:text-[#24a3b1] font-bold inline-block text-start" dir="ltr">
                 {{ contactConfig.phone }}
               </a>
             </div>
 
             <div>
               <span class="block text-[10px] sm:text-[11px] font-semibold text-teal-400 mb-0.5">{{ isRTL ? 'البريد الإلكتروني:' : 'Email Address:' }}</span>
-              <a :href="`mailto:${contactConfig.email}`" class="text-white hover:text-[#24a3b1]">
+              <a :href="`mailto:${contactConfig.email}`" class="text-teal-100 hover:text-[#24a3b1] inline-block text-start font-medium" dir="ltr">
                 {{ contactConfig.email }}
               </a>
             </div>

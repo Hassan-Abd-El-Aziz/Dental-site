@@ -1,12 +1,12 @@
 export const contactConfig = {
   // Clinic contact phone numbers (Placeholders marked clearly for production update)
-  phone: '+966 11 000 0000', // [PLACEHOLDER - Update with verified clinic telephone]
-  phoneFormatted: '+966110000000',
-  emergencyPhone: '+966 50 000 0000', // [PLACEHOLDER - 24/7 Dental Emergency hotline]
-  
+  phone: '+201009039628', // [PLACEHOLDER - Update with verified clinic telephone]
+  phoneFormatted: '+201009039628',
+  emergencyPhone: '+201009039628', // [PLACEHOLDER - 24/7 Dental Emergency hotline]
+
   // WhatsApp booking number (Without + or spaces for wa.me API)
-  whatsappNumber: '966500000000', // [PLACEHOLDER - Update with clinic WhatsApp business line]
-  whatsappDisplay: '+966 50 000 0000',
+  whatsappNumber: '201009039628', // [PLACEHOLDER - Update with clinic WhatsApp business line]
+  whatsappDisplay: '+201009039628',
   
   // Official Clinic Email
   email: 'info@prestigesmile.com', // [PLACEHOLDER - Update with verified email]
