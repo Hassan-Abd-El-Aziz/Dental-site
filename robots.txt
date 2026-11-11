@@ -1,0 +1,10 @@
+# robots.txt for Hassan Dental
+User-agent: *
+Allow: /
+
+# Exclude private, admin or dev paths if any
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://hassandental.com/sitemap.xml
