@@ -1,4 +1,4 @@
-import{c as P,u as S}from"./index-DiOrv25M.js";import{u as B}from"./useSeo-BW_XUzaG.js";import{r as w,o as m,e as x,u as t,d as e,t as n,D as L,f as $,p as C,s as p,C as _,n as v,G as M,H as F,E as A,j as T}from"./vue-vendor-6VB1Row-.js";function U(){const{currentLang:g}=S(),d=w(!1),i=w(!1),r=w(""),y=({name:u,phone:c,service:s,date:a,time:h,notes:f})=>{const b=g.value==="ar";let o="";b?o=`السلام عليكم ورحمة الله، بريستيج سمايل لطب الأسنان 🦷
+import{c as P,u as S}from"./index-BdltreN9.js";import{u as B}from"./useSeo-CIMSFZvL.js";import{r as w,o as m,e as x,u as t,d as e,t as n,D as L,f as $,p as C,s as p,C as _,n as v,G as M,H as F,E as A,j as T}from"./vue-vendor-6VB1Row-.js";function U(){const{currentLang:g}=S(),d=w(!1),i=w(!1),r=w(""),y=({name:u,phone:c,service:s,date:a,time:h,notes:f})=>{const b=g.value==="ar";let o="";b?o=`السلام عليكم ورحمة الله، بريستيج سمايل لطب الأسنان 🦷
 
 أود تقديم طلب حجز موعد جديد:
 • الاسم الكريم: ${u}
