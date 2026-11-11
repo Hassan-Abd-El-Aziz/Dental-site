@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "./original-system.css";
+
+/* ==========================================================================
+   HASSAN DENTAL - CENTRAL DESIGN TOKENS & CSS CUSTOM PROPERTIES
+   ========================================================================== */
+:root {
+  --color-primary: #24a3b1;
+  --color-primary-dark: #011f23;
+  --color-primary-deep: #022f34;
+  --color-primary-light: #eef9fa;
+  --color-secondary: #36c0d0;
+  --color-background: #fafafa;
+  --color-surface: #ffffff;
+  --color-text: #011f23;
+  --color-muted: #707070;
+  --color-border: #e2e2e2;
+  --color-accent: #24a3b1;
+
+  --font-arabic: 'Cairo', 'Tajawal', system-ui, -apple-system, sans-serif;
+  --font-english: 'Sora', 'Helvetica Neue', Arial, sans-serif;
+  --font-prestige-ar: 'Amiri', 'Cairo', serif;
+  --font-prestige-en: 'Cinzel', 'Playfair Display', serif;
+}
+
+.font-prestige {
+  font-family: var(--font-prestige-ar);
+  letter-spacing: 0.02em;
+}
+
+[dir="ltr"] .font-prestige {
+  font-family: var(--font-prestige-en);
+  letter-spacing: 0.08em;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & DIRECTION
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+html[dir="rtl"] {
+  font-family: var(--font-arabic);
+}
+
+html[dir="ltr"] {
+  font-family: var(--font-english);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RTL Helpers */
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Container Utility */
+.site-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Brand Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(36, 163, 177, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #1b8591;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(36, 163, 177, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: rgba(36, 163, 177, 0.1);
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(36, 163, 177, 0.2);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(36, 163, 177, 0.18);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: #ffffff;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-white:hover {
+  background-color: #f0f7f8;
+  transform: translateY(-2px);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

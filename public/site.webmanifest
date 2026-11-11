@@ -1,0 +1,21 @@
+{
+  "name": "Hassan Dental | عيادة حسن لطب الأسنان",
+  "short_name": "Hassan Dental",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#011f23",
+  "theme_color": "#24a3b1",
+  "description": "Modern, Gentle and Advanced Dental Clinic in Riyadh",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/webclip.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}
