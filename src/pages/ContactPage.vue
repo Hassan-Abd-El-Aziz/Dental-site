@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
 import { useLanguage } from '../composables/useLanguage.js';
 import { useSeo } from '../composables/useSeo.js';
 import { contactConfig } from '../config/contact.js';
@@ -14,8 +14,6 @@ const contactForm = reactive({
   message: ''
 });
 
-const isSent = ref(false);
-
 const sendMessage = () => {
   if (!contactForm.name || !contactForm.phone) return;
   const isAr = currentLang.value === 'ar';
@@ -25,7 +23,6 @@ const sendMessage = () => {
   
   const url = `https://wa.me/${contactConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank');
-  isSent.value = true;
 };
 </script>
 

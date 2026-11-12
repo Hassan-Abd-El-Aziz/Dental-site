@@ -5,7 +5,7 @@ import ServicesSection from '../components/home/ServicesSection.vue';
 import FaqSection from '../components/home/FaqSection.vue';
 import BookingCtaSection from '../components/home/BookingCtaSection.vue';
 
-const { currentLang, isRTL, t } = useLanguage();
+const { isRTL } = useLanguage();
 useSeo('services');
 
 const steps = [

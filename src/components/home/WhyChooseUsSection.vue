@@ -4,7 +4,7 @@ import { useLanguage } from '../../composables/useLanguage.js';
 import { useAnimation } from '../../composables/useAnimation.js';
 import SectionHeading from '../common/SectionHeading.vue';
 
-const { currentLang, isRTL, t, currentMessages } = useLanguage();
+const { isRTL, t, currentMessages } = useLanguage();
 const { revealElements } = useAnimation();
 
 onMounted(() => {
@@ -27,7 +27,7 @@ onMounted(() => {
         <!-- Left: Feature Cards Grid (7 cols) -->
         <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 text-start">
           <div 
-            v-for="(val, idx) in currentMessages.values.items"
+            v-for="(val, idx) in (currentMessages?.values?.items || [])"
             :key="idx"
             class="value-item-reveal bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-gray-100 transition-all duration-300 hover:-translate-y-1"
           >

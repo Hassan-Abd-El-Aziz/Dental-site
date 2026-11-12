@@ -57,6 +57,30 @@ export const seoConfig = {
         keywords: ['dental services', 'teeth whitening', 'dental implants', 'orthodontics']
       }
     },
+    doctors: {
+      ar: {
+        title: 'أطباؤنا | نخبة استشاريي وجراحي الأسنان | بريستيج سمايل',
+        description: 'تعرف على الفريق الطبي في بريستيج سمايل: نخبة من أطباء واستشاريي زراعة، تقويم، علاج وتجميل الأسنان بأحدث المعايير العالمية.',
+        keywords: ['أطباء بريستيج سمايل', 'استشاري أسنان', 'طبيب تقويم أسنان', 'طبيب زراعة أسنان']
+      },
+      en: {
+        title: 'Our Doctors | Dedicated Dental Specialists | Prestige Smile',
+        description: 'Meet our world-class medical staff at Prestige Smile: certified specialists in orthodontics, implants, cosmetics, and endodontics.',
+        keywords: ['dental doctors', 'dentists Prestige Smile', 'implant specialist', 'orthodontist']
+      }
+    },
+    blog: {
+      ar: {
+        title: 'المدونة الطبية | نصائح وإرشادات صحة الفم والأسنان | بريستيج سمايل',
+        description: 'مقالات طبية متخصصة ومبسطة يكتبها استشاريو عيادة بريستيج سمايل لمساعدتك في اتخاذ أفضل القرارات لصحة وجمال أسنانك.',
+        keywords: ['مدونة الأسنان', 'نصائح تبييض الأسنان', 'صحة الفم', 'التقويم الشفاف']
+      },
+      en: {
+        title: 'Dental Blog | Expert Oral Health Insights | Prestige Smile',
+        description: 'Evidence-based oral health articles authored by our clinical consultants to empower your daily dental care.',
+        keywords: ['dental blog', 'oral health advice', 'teeth whitening tips', 'dental hygiene']
+      }
+    },
     contact: {
       ar: {
         title: 'اتصل بنا | موقع العيادة وأرقام التواصل | بريستيج سمايل',

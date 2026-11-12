@@ -3,12 +3,11 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useLanguage } from '../../composables/useLanguage.js';
 import { navigationConfig } from '../../config/navigation.js';
-import { contactConfig } from '../../config/contact.js';
 import BrandLogo from '../common/BrandLogo.vue';
 import LanguageSwitcher from '../common/LanguageSwitcher.vue';
 import MobileNavigation from './MobileNavigation.vue';
 
-const { currentLang, isRTL, t, localize } = useLanguage();
+const { isRTL, localize } = useLanguage();
 const route = useRoute();
 
 const isScrolled = ref(false);
@@ -94,7 +93,7 @@ onUnmounted(() => {
           <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          <span class="text-[11px] sm:text-xs font-bold">{{ isRTL ? 'حجز موعد' : 'Book Visit' }}</span>
+          <span class="text-[11px] sm:text-xs text-white font-bold">{{ isRTL ? 'حجز موعد' : 'Book Visit' }}</span>
         </router-link>
 
         <!-- Menu Toggle Button: يظهر فقط في الشاشات الصغيرة وعند ظهوره يختفي الناف بار تماماً -->

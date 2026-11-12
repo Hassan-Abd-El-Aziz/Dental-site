@@ -253,5 +253,57 @@ export default {
     locationTitle: 'Clinic Location',
     getDirections: 'Get Directions on Google Maps',
     emergencyNotice: 'For acute emergencies and trauma outside regular hours, please call our 24/7 hotline immediately.'
+  },
+  doctors: {
+    tag: 'Specialist Medical Staff',
+    title: 'Meet Our Dedicated Dental Specialists',
+    subtitle: 'Highly qualified clinical consultants committed to luxurious, comfortable, and pain-free dental care.',
+    items: [
+      {
+        name: 'Dr. Khaled Al-Mansoor',
+        role: 'Specialist Orthodontist & Oral Surgeon',
+        degree: 'Master of Orthodontics - German Board Certified',
+        experience: '14+ Years Experience',
+        image: '/images/gen_team-image-1.jpg'
+      },
+      {
+        name: 'Dr. Sarah Abdelrahman',
+        role: 'Cosmetic Dentistry & Smile Makeover Specialist',
+        degree: 'Fellow of American Academy of Cosmetic Dentistry (AACD)',
+        experience: '10+ Years Experience',
+        image: '/images/gen_team-image-2.jpg'
+      },
+      {
+        name: 'Dr. Ahmed Al-Sharif',
+        role: 'Pediatric Dental Specialist',
+        degree: 'Diploma in Pediatric Dentistry & Early Intervention',
+        experience: '9+ Years Experience',
+        image: '/images/gen_team-image-3.jpg'
+      },
+      {
+        name: 'Dr. Tariq Al-Saeed',
+        role: 'Periodontist & Implantologist',
+        degree: 'PhD in Digital Dental Implantology - Switzerland',
+        experience: '16+ Years Experience',
+        image: '/images/gen_team-image-4.jpg'
+      },
+      {
+        name: 'Dr. Faisal Al-Qahtani',
+        role: 'Endodontic Root Canal Specialist',
+        degree: 'Master of Microscopic Endodontics',
+        experience: '11+ Years Experience',
+        image: '/images/gen_team-image-5.jpg'
+      },
+      {
+        name: 'Noura Al-Otaibi',
+        role: 'Senior Dental Hygienist',
+        degree: 'BSc in Oral Hygiene & Preventive Periodontics',
+        experience: '8+ Years Experience',
+        image: '/images/gen_team-image-6.jpg'
+      }
+    ]
+  },
+  blog: {
+    readMore: 'Read More'
   }
 };

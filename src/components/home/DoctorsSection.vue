@@ -4,7 +4,7 @@ import { useLanguage } from '../../composables/useLanguage.js';
 import { useAnimation } from '../../composables/useAnimation.js';
 import SectionHeading from '../common/SectionHeading.vue';
 
-const { currentLang, isRTL, t, currentMessages } = useLanguage();
+const { isRTL, t, currentMessages } = useLanguage();
 const { revealElements } = useAnimation();
 
 onMounted(() => {
@@ -25,7 +25,7 @@ onMounted(() => {
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         
         <div 
-          v-for="(doc, idx) in currentMessages.doctors.items"
+          v-for="(doc, idx) in (currentMessages?.doctors?.items || [])"
           :key="idx"
           class="doctor-card-reveal group bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5"
         >

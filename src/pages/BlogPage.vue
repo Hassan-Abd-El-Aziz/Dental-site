@@ -4,7 +4,7 @@ import { useSeo } from '../composables/useSeo.js';
 import FaqSection from '../components/home/FaqSection.vue';
 import BookingCtaSection from '../components/home/BookingCtaSection.vue';
 
-const { currentLang, isRTL, t } = useLanguage();
+const { isRTL, t } = useLanguage();
 useSeo('blog');
 
 const articles = [

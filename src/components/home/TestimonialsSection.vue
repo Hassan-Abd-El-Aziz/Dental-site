@@ -4,7 +4,7 @@ import { useLanguage } from '../../composables/useLanguage.js';
 import { useAnimation } from '../../composables/useAnimation.js';
 import SectionHeading from '../common/SectionHeading.vue';
 
-const { currentLang, isRTL, t, currentMessages } = useLanguage();
+const { isRTL, t, currentMessages } = useLanguage();
 const { revealElements } = useAnimation();
 const activeIndex = ref(0);
 

@@ -3,7 +3,7 @@ import { contactConfig } from '../config/contact.js';
 import { useLanguage } from './useLanguage.js';
 
 export function useBooking() {
-  const { currentLang, isRTL } = useLanguage();
+  const { currentLang } = useLanguage();
   const isSubmitting = ref(false);
   const isSuccess = ref(false);
   const errorMessage = ref('');

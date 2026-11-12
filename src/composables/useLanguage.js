@@ -1,4 +1,4 @@
-import { ref, computed, watch, onMounted } from 'vue';
+import { ref, computed } from 'vue';
 import { messages, getTranslation } from '../i18n/index.js';
 
 const currentLang = ref('ar');
@@ -7,7 +7,10 @@ export function useLanguage() {
   const isRTL = computed(() => currentLang.value === 'ar');
   const dir = computed(() => isRTL.value ? 'rtl' : 'ltr');
   const t = (path) => getTranslation(currentLang.value, path);
-  const currentMessages = computed(() => messages[currentLang.value] || messages.ar);
+  const currentMessages = computed(() => {
+    const raw = messages[currentLang.value] || messages.ar;
+    return (raw && raw.default) ? raw.default : raw;
+  });
 
   const localize = (obj) => {
     if (!obj) return '';

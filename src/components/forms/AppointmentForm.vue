@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
 import { useLanguage } from '../../composables/useLanguage.js';
 import { useBooking } from '../../composables/useBooking.js';
 

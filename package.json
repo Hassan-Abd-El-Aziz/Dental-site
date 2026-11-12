@@ -4,11 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
+    "start": "vite --open",
     "build": "vite build && node scripts/prerender.js",
-    "preview": "vite preview",
+    "build:gh-pages": "vite build --base=/Dental-site/ && node scripts/prerender.js",
+    "preview": "vite preview --open",
     "build:client": "vite build",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {

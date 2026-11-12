@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, nextTick } from 'vue';
+import { onUnmounted } from 'vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -36,7 +36,7 @@ export function useAnimation() {
     const elements = gsap.utils.toArray(selector);
     if (!elements.length) return;
 
-    elements.forEach((el, idx) => {
+    elements.forEach((el) => {
       gsap.set(el, { opacity: 0, y });
 
       const anim = gsap.to(el, {
@@ -57,6 +57,15 @@ export function useAnimation() {
         triggers.push(anim.scrollTrigger);
       }
     });
+
+    // Safety net: ensure elements never remain invisible if ScrollTrigger is missed
+    setTimeout(() => {
+      elements.forEach(el => {
+        if (el && window.getComputedStyle(el).opacity === '0') {
+          gsap.to(el, { opacity: 1, y: 0, duration: 0.4 });
+        }
+      });
+    }, 1500);
 
     if (typeof window !== 'undefined') {
       setTimeout(() => {
@@ -96,15 +105,6 @@ export function useAnimation() {
     if (anim.scrollTrigger) {
       triggers.push(anim.scrollTrigger);
     }
-
-    // Safety net: ensure elements never remain invisible
-    setTimeout(() => {
-      elements.forEach(el => {
-        if (el && window.getComputedStyle(el).opacity === '0') {
-          gsap.to(el, { opacity: 1, y: 0, duration: 0.4 });
-        }
-      });
-    }, 1500);
 
     if (typeof window !== 'undefined') {
       setTimeout(() => {

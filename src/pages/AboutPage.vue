@@ -3,11 +3,10 @@ import { onMounted, ref } from 'vue';
 import { useLanguage } from '../composables/useLanguage.js';
 import { useAnimation } from '../composables/useAnimation.js';
 import { useSeo } from '../composables/useSeo.js';
-import SectionHeading from '../components/common/SectionHeading.vue';
 import WhyChooseUsSection from '../components/home/WhyChooseUsSection.vue';
 import BookingCtaSection from '../components/home/BookingCtaSection.vue';
 
-const { currentLang, isRTL, t } = useLanguage();
+const { isRTL, t } = useLanguage();
 const { animateCounter, revealElements } = useAnimation();
 
 useSeo('about');

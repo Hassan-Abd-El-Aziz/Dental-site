@@ -1,5 +1,5 @@
 <script setup>
-import { watch, onMounted, onUnmounted } from 'vue';
+import { watch, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useLanguage } from '../../composables/useLanguage.js';
 import { navigationConfig } from '../../config/navigation.js';
@@ -15,7 +15,7 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['close']);
-const { currentLang, isRTL, t, localize } = useLanguage();
+const { isRTL, localize } = useLanguage();
 const route = useRoute();
 
 const isNavActive = (item) => {
@@ -148,7 +148,8 @@ onUnmounted(() => {
   </teleport>
 </template>
 
-<style scoped>
+<style>
+/* Transitions for Teleported Mobile Drawer */
 .mobile-backdrop-enter-active,
 .mobile-backdrop-leave-active {
   transition: opacity 0.3s ease;
@@ -167,8 +168,8 @@ onUnmounted(() => {
   transform: translateX(100%);
   opacity: 0;
 }
-:global([dir="ltr"]) .mobile-drawer-enter-from,
-:global([dir="ltr"]) .mobile-drawer-leave-to {
+html[dir="ltr"] .mobile-drawer-enter-from,
+html[dir="ltr"] .mobile-drawer-leave-to {
   transform: translateX(-100%);
   opacity: 0;
 }

@@ -8,7 +8,7 @@ const props = defineProps({
   }
 });
 
-const { currentLang, isRTL, toggleLanguage } = useLanguage();
+const { currentLang, toggleLanguage } = useLanguage();
 </script>
 
 <template>

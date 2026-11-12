@@ -6,7 +6,7 @@ import { updatePageSeo } from '../utils/seo.js';
 
 export function useSeo(pageKey = 'home', customMeta = null) {
   const route = useRoute();
-  const { currentLang, isRTL } = useLanguage();
+  const { currentLang } = useLanguage();
 
   const applySeo = () => {
     const lang = currentLang.value;

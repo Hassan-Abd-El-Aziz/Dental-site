@@ -5,6 +5,10 @@ import './assets/styles/main.css';
 
 const app = createApp(App);
 
+app.config.errorHandler = (err, instance, info) => {
+  console.error('[VUE ERROR]', err, info);
+};
+
 // Image fallback directive to ensure images never break
 app.directive('fallback', {
   mounted(el, binding) {

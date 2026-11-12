@@ -5,7 +5,7 @@ import { useAnimation } from '../../composables/useAnimation.js';
 import { contactConfig } from '../../config/contact.js';
 import SectionHeading from '../common/SectionHeading.vue';
 
-const { currentLang, isRTL, t, currentMessages } = useLanguage();
+const { isRTL, t, currentMessages } = useLanguage();
 const { revealElements } = useAnimation();
 
 const selectedCategory = ref('ALL');
@@ -19,7 +19,7 @@ const categories = computed(() => {
 
 const filteredFaqs = computed(() => {
   const items = currentMessages.value?.faq?.items || [];
-  return items.filter((faq, idx) => {
+  return items.filter((faq) => {
     // Category filter
     const matchesCat = selectedCategory.value === 'ALL' 
       || selectedCategory.value === (isRTL.value ? 'الكل' : 'All')

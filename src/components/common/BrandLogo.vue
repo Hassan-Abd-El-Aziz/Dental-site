@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue';
 import { useLanguage } from '../../composables/useLanguage.js';
-import { siteConfig } from '../../config/site.js';
 
 const props = defineProps({
   mode: {
@@ -14,7 +13,7 @@ const props = defineProps({
   }
 });
 
-const { currentLang, isRTL } = useLanguage();
+const { isRTL } = useLanguage();
 
 const isDark = computed(() => props.mode === 'dark');
 </script>

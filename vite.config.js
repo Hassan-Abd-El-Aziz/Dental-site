@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/Dental-site/' : '/',
+  base: '/',
   plugins: [
     vue(),
     tailwindcss()
@@ -16,7 +16,11 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: false
+    open: true
+  },
+  preview: {
+    port: 3000,
+    open: true
   },
   build: {
     target: 'esnext',

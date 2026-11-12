@@ -7,7 +7,7 @@ export function generateSchemaJsonLd(pageType = 'Dentist', pageData = {}) {
   const name = isEn ? siteConfig.name.en : siteConfig.name.ar;
   const description = isEn ? seoConfig.defaultDescription.en : seoConfig.defaultDescription.ar;
   const addressLocality = isEn ? contactConfig.city.en : contactConfig.city.ar;
-  const addressCountry = isEn ? 'SA' : 'SA';
+  const addressCountry = 'SA';
   const streetAddress = isEn ? contactConfig.address.en : contactConfig.address.ar;
 
   const baseDentalSchema = {

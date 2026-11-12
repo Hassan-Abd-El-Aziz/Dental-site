@@ -4,7 +4,7 @@ import { useLanguage } from '../../composables/useLanguage.js';
 import { useAnimation } from '../../composables/useAnimation.js';
 import SectionHeading from '../common/SectionHeading.vue';
 
-const { currentLang, isRTL, t, currentMessages } = useLanguage();
+const { isRTL, t, currentMessages } = useLanguage();
 const { revealElements } = useAnimation();
 
 onMounted(() => {
@@ -27,7 +27,7 @@ onMounted(() => {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         
         <div 
-          v-for="service in currentMessages.services.items" 
+          v-for="service in (currentMessages?.services?.items || [])" 
           :key="service.id"
           class="service-card-reveal group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
         >

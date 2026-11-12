@@ -4,7 +4,7 @@ import { useLanguage } from '../../composables/useLanguage.js';
 import { useAnimation } from '../../composables/useAnimation.js';
 import { contactConfig } from '../../config/contact.js';
 
-const { currentLang, isRTL, t } = useLanguage();
+const { isRTL, t } = useLanguage();
 const { revealElements } = useAnimation();
 
 onMounted(() => {
